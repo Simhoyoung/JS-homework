@@ -28,77 +28,61 @@ function pwReg(text) {
 
 const emailField = document.querySelector("#userEmail");
 const pwField = document.querySelector("#userPassword");
-
 const submit = document.querySelector(".btn-login");
-const errMessage = document.querySelector("#userEmailError");
-
-
 
 
 /* ---------------------------------이메일 정규식--------------------------------- */
 
-function checkUserEmail(value){
-  return emailReg.test(value);
+function checkUserId() {
+
+  if (emailReg(this.value)) {
+
+    emailField.classList.remove("is--invalid");
+
+  } else {
+
+    emailField.classList.add("is--invalid");
+  }
 }
-
-
-// function checkUserId() {
-
-//   if (emailField === user.id) {
-
-//     idField.classList.aad("is--invalid");
-
-//   } else if (emailField === null || emailField === '') {
-
-//     idField.classList.remove("is--invalid");
-//   }
-// }
 
 
 /* ----------------------------------비밀번호 정규식 --------------------------------- */
 
-function checkUserPw(){
-  return pwReg.test(value);
+function checkUserPw() {
+
+  if (pwReg(this.value)) {
+
+    pwField.classList.remove("is--invalid");
+
+  } else {
+
+    pwField.classList.add("is--invalid");
+  }
+
 }
-
-
-// function checkUserPw() {
-
-//   if (pwField === user.pw) {
-
-//     pwField.classList.aad("is--invalid");
-
-//   } else if (pwField === null || pwField === ''){
-
-//     pwField.classList.remove("is--invalid");
-//   }
-// }
 
 
 /* --------------------------------- 페이지 이동 --------------------------------- */
 
-function welcome() {
-
-  if (emailField === user.id && pwField === user.pw){
-    window.location.href = 'welcome.html'
-  }
-  else{
-
-  } 
-
-}
-
-
 function handleSubmit(){
 
-  
+  if (emailReg(this.value) && pwReg(this.value)){
+
+    window.location.href = "welcome.html"
+
+  }else{
+
+    window
+
+  }
+
 }
 
 
 /* ------------------------------ eventListener ----------------------------- */
 
-emailField.addEventListener('input' ,checkUserId())
+emailField.addEventListener('input' ,checkUserId)
 
-pwField.addEventListener('input' ,checkUserPw())
+pwField.addEventListener('input' ,checkUserPw)
 
-submit.addEventListener('click' ,)
+submit.addEventListener('click' ,handleSubmit)

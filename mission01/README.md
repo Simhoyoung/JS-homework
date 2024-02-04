@@ -30,7 +30,7 @@ https://docs.google.com/forms/d/e/1FAIpQLScpXQBd8pTPlCaiqxS_QBXRjhRqHry3pA7MDC-7
 추가적인 공부를 해서 꼭 완성시켜 보도록 하겠습니다 😭
 
 ---
-###코드내용
+###코드 내용
 
 ![alt text](image.png)
 
@@ -56,3 +56,8 @@ querySelector를 통해 html 내에 아이디와 비밀번호, 제출 내용을 
 나머지 코드도 비슷한 상태입니다.
 
 감사합니다 ...
+
+---
+### 수정 내용
+
+![alt text](image-5.png)
