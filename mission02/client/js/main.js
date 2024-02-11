@@ -9,17 +9,24 @@
 
 */
 
-const list = document.querySelectorAll('li');
+const nav = document.querySelector('.nav');
+
+
+/* --------------------------------- 클릭 이벤트 --------------------------------- */
+
+function handleClick(e){
+  let target = e.target;
+  let index = target.dataset.index;
+
+  while(!index) {
+    target = target.parentNode;
+    index = target.dataset.index;
+  }
+
+}
 
 
 
 
-
-
-
-
-
-
-
-
+nav.addEventListener('click', handleClick);
 
